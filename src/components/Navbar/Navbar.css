@@ -22,12 +22,22 @@
 }
 
 
+.nav-menu a {
+    color: #000000;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-menu li:hover a {
+    color: #ff4141;
+}
+
 .nav-menu{
     display: flex;
     align-items: center;
     list-style: none;
     gap: 50px;
-    color: #626262;
+    color: black;
     font-size: 20px;
     font-weight: 500;
 }
@@ -40,6 +50,9 @@
     gap: 3px;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: #000000;
+    color: #000000;
 }
 
 .nav-menu li:hover {
@@ -113,7 +126,8 @@
     
 .nav-dropdown{
     display: none;
-    cursor: pointer;}
+    cursor: pointer;
+}
 
 
 
