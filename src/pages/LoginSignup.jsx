@@ -18,48 +18,57 @@ const login = async () =>{
   console.log("Login Function Excecuted", formData);
 
   let responseData;
-  await fetch('http://localhost:4000/login',{
-    method:'POST',
-    headers:{
-      Accept:'application/form-data',
-      'Content-Type':'application/json',
-    },
-    body:JSON.stringify(formData),
-
-  }).then((response)=> response.json()).then((data)=>responseData=data)
-
-
-if(responseData.success){
-  localStorage.setItem('auth-token', responseData.token)
-  window.location.replace('/')
-}
-else{
-  alert(responseData.errors)
-}
+  try {
+    const res = await fetch('http://localhost:8080/api/login', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        username: formData.username,
+        password: formData.password
+      }),
+    });
+    responseData = await res.json();
+    if (res.status === 200 && responseData.token) {
+      localStorage.setItem('auth-token', responseData.token);
+      window.location.replace('/');
+    } else {
+      alert(responseData.error || "Login failed");
+    }
+  } catch (err) {
+    alert("Failed to connect to server");
+  }
 }
 
 const signup = async () =>{
   console.log("Signup Function Excecuted", formData);
 
   let responseData;
-  await fetch('http://localhost:4000/signup',{
-    method:'POST',
-    headers:{
-      Accept:'application/form-data',
-      'Content-Type':'application/json',
-    },
-    body:JSON.stringify(formData),
-
-  }).then((response)=> response.json()).then((data)=>responseData=data)
-
-
-if(responseData.success){
-  localStorage.setItem('auth-token', responseData.token)
-  window.location.replace('/')
-}
-else{
-  alert(responseData.errors)
-}
+  try {
+    const res = await fetch('http://localhost:8080/api/register', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        username: formData.username,
+        password: formData.password,
+        email: formData.email
+      }),
+    });
+    responseData = await res.json();
+    if (res.status === 201) {
+      alert("Signup successful! Please login.");
+      setState("Login");
+    } else {
+      alert(responseData.error || "Signup failed");
+    }
+  } catch (err) {
+    alert("Failed to connect to server");
+  }
 }
   return (
     <div className="loginsignup">

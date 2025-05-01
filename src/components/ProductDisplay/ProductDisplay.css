@@ -78,12 +78,15 @@
   padding: 18px 24px;
   background: #fbfbfb;
   border: 1px solid #ebebeb;
-  border-radius: 3px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .productdisplay-right-sizes div:hover {
-  background: #ff4141;
+  background: #fff2f2;
+  border-color: #ff4141;
+  transform: translateY(-2px);
 }
 
 .productdisplay-right button {
@@ -92,12 +95,18 @@
   font-size: 16px;
   font-weight: 600;
   color: white;
-  background: #ff4141;
+  background: linear-gradient(135deg, #ff4141, #ff7070);
   margin-bottom: 40px;
   border: none;
   outline: none;
   cursor: pointer;
   border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.productdisplay-right button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 65, 65, 0.3);
 }
 
 .productdisplay-right-category {
@@ -295,5 +304,19 @@
   }
   .productdisplay-right-category{
     font-size: 16px;
+  }
+}
+
+@media(max-width: 480px) {
+  .productdisplay {
+    margin: 0 20px;
+  }
+  
+  .productdisplay-left {
+    margin-bottom: 30px;
+  }
+  
+  .productdisplay-right h1 {
+    font-size: 24px;
   }
 }

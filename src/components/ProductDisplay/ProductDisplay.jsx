@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./ProductDisplay.css";
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
@@ -6,7 +6,21 @@ import { ShopContext } from "../../context/ShopContext";
 
 const ProductDisplay = (props) => {
   const { product } = props;
-  const {addToCart} = useContext(ShopContext)
+  const { addToCart } = useContext(ShopContext);
+  const [selectedSize, setSelectedSize] = useState(null);
+
+  const handleSizeClick = (size) => {
+    setSelectedSize(size);
+  };
+
+  const handleAddToCart = () => {
+    if (!selectedSize) {
+      alert("Please select a size before adding to cart.");
+      return;
+    }
+    addToCart(product.id, selectedSize);
+  };
+
   return (
     <div className="productdisplay">
       <div className="productdisplay-left">
@@ -46,12 +60,21 @@ const ProductDisplay = (props) => {
         <div className="productdisplay-right-size">
           <h1>Select Size</h1>
           <div className="productdisplay-right-sizes">
-            <div>Junior</div>
-            <div>Youth</div>
-            <div>Adult</div>
+            {["Junior", "Youth", "Adult"].map((size) => (
+              <div
+                key={size}
+                onClick={() => handleSizeClick(size)}
+                style={{
+                  border: selectedSize === size ? "2px solid #ff4141" : "",
+                  background: selectedSize === size ? "#ffeaea" : "",
+                }}
+              >
+                {size}
+              </div>
+            ))}
           </div>
         </div>
-        <button onClick={()=>{addToCart(product.id)}}>Add To Cart</button>
+        <button onClick={handleAddToCart}>Add To Cart</button>
         <p className="productdisplay-right-category">
           <span>Category : </span>Cricket,Sports
         </p>
