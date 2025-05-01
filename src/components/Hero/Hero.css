@@ -1,13 +1,14 @@
-.hero{
+/* .hero{
     height: 100vh;
     background: linear-gradient(180deg, #ffddc1, #e1ffea22 60% );
     display: flex;
 }
-/* 
-.hero-right img{
-    margin-left: 200px;
-} */
 
+.hero-right img {
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.2));
+    border-radius: 10px;
+  }
+  
 .hero-left{
     flex: 1;
     display: flex;
@@ -18,12 +19,28 @@
     line-height: 1.1;
 }
 
+
+.hero-submit-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ff4141;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .hero-submit-btn:hover {
+    background-color: #e93737;
+  }
+
+
 .hero_left h2{
     color: #090909;
     font-size: 26px;
-    font-weight: 600;
-
-}
+    font-weight: 600;}
 
 .hero-left p{
     color: #171717;
@@ -34,27 +51,10 @@
 .hero-hand-icon{
     display: flex;
     align-items: center;
-    gap: 20px;
-}
+    gap: 20px;}
 
 .hero-hand-icon img{
-    width: 105px;
-}
-
-.hero-latest-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    width: 30px;
-    height: 30px;
-    border-radius: 75px;
-    background: #ff4141;
-    color: white;
-    font-size: 22px;
-    font-weight: 500;
-    margin-top: 30px;
-}
+    width: 105px;}
 
 .hero-right{
     flex: 1;
@@ -155,4 +155,58 @@
         font-size: 14px;
     }
 }
+ */
 
+
+
+ .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(180deg, #ffddc1, #e1ffea22 60% );
+    color: white;
+    padding: 4rem 6%;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    margin-bottom: 100px;
+  }
+  
+  .hero-text h1 {
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    font-weight: 900;
+    line-height: 1.2;
+    color: rgba(44, 44, 44, 0.9);
+    margin-bottom: 20px;
+  }
+  
+  .hero-text h1 span {
+    color: white;
+  }
+  
+  .hero-text button {
+    margin-bottom: 20px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: #ff4141;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease;
+  }
+  
+  .hero-text button:hover {
+    background: #e93636;
+  }
+  
+  .hero-image img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.4));
+  }
+  

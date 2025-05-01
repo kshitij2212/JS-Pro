@@ -1,69 +1,72 @@
-import p1_img from "./product_12.png";
-import p2_img from "./product_35.png";
-import p3_img from "./product_14.png";
-import p4_img from "./product_8.png";
-import p5_img from "./product_15.png";
-import p6_img from "./product_2.png";
-import p7_img from "./product_17.png";
-import p8_img from "./product_28.png";
+import p30_img from "./product_30.png";
+import p36_img from "./product_36.png";
+import p15_img from "./product_15.png";
+import p31_img from "./product_31.png";
+import p5_img from "./product_5.png";
+import p6_img from "./product_6.png";
+import p17_img from "./product_17.png";
+import p28_img from "./product_28.png";
 
 let new_collections = [
-  {
-    id: 12,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p1_img,
-    new_price: 50.0,
-    old_price: 80.5,
+ {
+    id: 30,
+    name: "Empra SS Cricket Helmet",
+    image: p30_img,
+    new_price: 999.0,
+    old_price: 1200.0,
   },
   {
-    id: 35,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
-    image: p2_img,
-    new_price: 85.0,
-    old_price: 120.5,
+    id: 6,
+    name: "Multireaction Ball",
+    category: "women",
+    image: p6_img,
+    new_price: 185.00,
+    old_price: 220.00,
   },
   {
-    id: 14,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
-    image: p3_img,
-    new_price: 60.0,
-    old_price: 100.5,
-  },
-  {
-    id: 8,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p4_img,
-    new_price: 100.0,
-    old_price: 150.0,
+    id: 31,
+    name: "Intense Attitude Wicket Keeping Gloves",
+    category: "kid",
+    image: p31_img,
+    new_price: 1199.0,
+    old_price: 1520.0,
   },
   {
     id: 15,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
-    image: p5_img,
-    new_price: 50.0,
-    old_price: 80.5,
+    name: "Condor Winger English Willow Bat",
+    image: p15_img,
+    new_price: 10449,
+    old_price: 12055,
   },
   {
-    id: 2,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p6_img,
-    new_price: 85.0,
-    old_price: 120.5,
+    id: 5,
+    name: "Zoomer I-20 Ball",
+    category: "women",
+    image: p5_img,
+    new_price: 85.00,
+    old_price: 120.00,
   },
+  {
+    id: 36,
+    name: "Cricket Bat Repair Kit",
+    image: p36_img,
+    new_price: 285.0,
+    old_price: 320.0,},
   {
     id: 17,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
-    image: p7_img,
-    new_price: 60.0,
-    old_price: 100.5,
+    name: "SG T-Dominor Scoop Cricket Bat",
+    category: "men",
+    image: p17_img,
+    new_price: 3999,
+    old_price: 4500,
   },
   {
     id: 28,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
-    image: p8_img,
-    new_price: 100.0,
-    old_price: 150.0,
+    name: "Fine Duco Finish Cricket Stumps",
+    image: p28_img,
+    new_price: 1887.0,
+    old_price: 1944.0,
   },
-];
+]
 
 export default new_collections;
