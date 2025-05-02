@@ -7,6 +7,7 @@ import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import LoginSignup from "./pages/LoginSignup";
 import Footer from "./components/Footer/Footer.jsx";
+import Contact from "./components/Contact/Contact.jsx";
 import men_banner from "./components/Assets/banner_mens.png";
 import women_banner from "./components/Assets/banner_women.png";
 import kid_banner from "./components/Assets/banner_kids.png";
@@ -33,6 +34,7 @@ function App() {
             <Route path=":ProductId" element={<Product />} />
           </Route>
           <Route path="/cart" element={<Cart />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<LoginSignup />} />
         </Routes>
         <Footer />

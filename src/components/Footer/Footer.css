@@ -30,12 +30,24 @@
     gap: 50px;
     color: #252525;
     font-size: 20px;
+}
 
+.footer-links li a {
+    text-decoration: none;
+    color: black;  
+}
+
+.footer-links li a:hover {
+    color: #ff6f32;
+    text-decoration: underline;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 
 .footer-links li{
-    cursor: pointer;}
-
+    cursor: pointer;
+    color: black;
+}
 .footer-social-icon{
     display: flex;
     gap: 20px;
